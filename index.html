@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agente Leal — Automação e atendimento digital</title>
+  <meta name="description" content="Agente Leal oferece serviços de automação, atendimento digital, integração de sistemas e consultoria tecnológica para prestadores e pequenos negócios." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://agenteleal.com.br/" />
+  <meta property="og:title" content="Agente Leal" />
+  <meta property="og:description" content="Automação, atendimento digital e integração de sistemas para prestadores e pequenos negócios." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://agenteleal.com.br/" />
+  <meta name="theme-color" content="#0f172a" />
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #111827;
+      --muted: #526071;
+      --surface: #ffffff;
+      --surface-2: #f7f7f4;
+      --line: #e4e4dd;
+      --accent: #1f6f5b;
+      --accent-2: #d8a444;
+      --dark: #0f172a;
+      --dark-muted: #a8b3c7;
+      --radius: 22px;
+      --shadow: 0 24px 80px rgba(15, 23, 42, .12);
+      --max: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #fbfbf8 0%, #f4f2eb 100%);
+      line-height: 1.55;
+    }
+    a { color: inherit; }
+    .skip { position: absolute; left: -999px; top: 8px; background: #fff; padding: 8px 12px; border-radius: 10px; }
+    .skip:focus { left: 8px; z-index: 10; }
+    header {
+      position: sticky; top: 0; z-index: 5;
+      backdrop-filter: blur(14px);
+      background: rgba(251, 251, 248, .82);
+      border-bottom: 1px solid rgba(228, 228, 221, .72);
+    }
+    .nav {
+      max-width: var(--max); margin: 0 auto; padding: 16px 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    }
+    .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 800; letter-spacing: -.03em; }
+    .mark {
+      width: 38px; height: 38px; border-radius: 12px;
+      background: var(--dark); color: #fff; display: grid; place-items: center;
+      font-weight: 900; letter-spacing: -.06em;
+      box-shadow: 0 12px 28px rgba(15, 23, 42, .18);
+    }
+    .links { display: flex; align-items: center; gap: 18px; font-size: 14px; color: var(--muted); }
+    .links a { text-decoration: none; }
+    .links a:hover, .links a:focus { color: var(--ink); }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center; min-height: 46px;
+      padding: 0 18px; border-radius: 999px; background: var(--dark); color: #fff;
+      font-weight: 750; text-decoration: none; border: 1px solid var(--dark);
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    }
+    .button:hover, .button:focus { transform: translateY(-1px); box-shadow: 0 12px 30px rgba(15,23,42,.20); }
+    .button.secondary { background: transparent; color: var(--ink); border-color: var(--line); }
+    .hero { max-width: var(--max); margin: 0 auto; padding: 86px 24px 70px; display: grid; grid-template-columns: 1.08fr .92fr; gap: 48px; align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--accent); font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: .12em; }
+    .eyebrow::before { content: ""; width: 30px; height: 2px; background: var(--accent-2); display: inline-block; }
+    h1 { font-size: clamp(42px, 7vw, 78px); line-height: .94; letter-spacing: -.075em; margin: 20px 0 24px; max-width: 760px; }
+    .lead { color: var(--muted); font-size: clamp(18px, 2vw, 21px); max-width: 660px; margin: 0 0 32px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .proof { margin-top: 32px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 680px; }
+    .proof div { padding: 16px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.7); }
+    .proof strong { display: block; font-size: 14px; }
+    .proof span { display: block; color: var(--muted); font-size: 13px; margin-top: 3px; }
+    .panel {
+      background: var(--dark); color: #fff; border-radius: 30px; padding: 28px;
+      box-shadow: var(--shadow); overflow: hidden; position: relative;
+    }
+    .panel::before {
+      content: ""; position: absolute; inset: -120px -80px auto auto; width: 260px; height: 260px;
+      background: radial-gradient(circle, rgba(216,164,68,.36), transparent 62%);
+    }
+    .panel h2 { margin: 0 0 18px; font-size: 24px; letter-spacing: -.03em; position: relative; }
+    .task { position: relative; padding: 16px 0; border-top: 1px solid rgba(255,255,255,.13); display: grid; grid-template-columns: 28px 1fr; gap: 12px; }
+    .task:first-of-type { border-top: 0; }
+    .check { width: 24px; height: 24px; border-radius: 50%; background: rgba(31,111,91,.95); display: grid; place-items: center; font-size: 14px; }
+    .task strong { display: block; font-size: 15px; }
+    .task span { display: block; color: var(--dark-muted); font-size: 14px; margin-top: 2px; }
+    section { max-width: var(--max); margin: 0 auto; padding: 70px 24px; }
+    .section-title { max-width: 720px; margin-bottom: 28px; }
+    .section-title h2 { margin: 0 0 12px; font-size: clamp(32px, 4vw, 48px); line-height: 1; letter-spacing: -.055em; }
+    .section-title p { margin: 0; color: var(--muted); font-size: 18px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: 0 16px 40px rgba(15,23,42,.06); }
+    .card h3 { margin: 0 0 10px; font-size: 20px; letter-spacing: -.025em; }
+    .card p { margin: 0; color: var(--muted); }
+    .about { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: stretch; }
+    .about .card:first-child { background: var(--dark); color: #fff; }
+    .about .card:first-child p { color: var(--dark-muted); }
+    .list { margin: 18px 0 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+    .list li { display: flex; gap: 10px; align-items: flex-start; color: inherit; }
+    .list li::before { content: "•"; color: var(--accent-2); font-weight: 900; }
+    .contact { background: var(--dark); color: #fff; border-radius: 34px; padding: clamp(28px, 5vw, 52px); display: grid; grid-template-columns: 1.2fr .8fr; gap: 28px; align-items: center; box-shadow: var(--shadow); }
+    .contact h2 { margin: 0 0 12px; font-size: clamp(32px, 5vw, 56px); line-height: 1; letter-spacing: -.055em; }
+    .contact p { color: var(--dark-muted); margin: 0; font-size: 18px; }
+    .contact-box { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.13); border-radius: 24px; padding: 22px; }
+    .contact-box a { display: block; color: #fff; font-weight: 750; text-decoration: none; margin-top: 8px; overflow-wrap: anywhere; }
+    .privacy { font-size: 14px; color: var(--muted); }
+    footer { border-top: 1px solid var(--line); padding: 28px 24px; color: var(--muted); }
+    footer .inner { max-width: var(--max); margin: 0 auto; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    @media (max-width: 860px) {
+      .links { display: none; }
+      .hero, .about, .contact { grid-template-columns: 1fr; }
+      .proof, .grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 56px; }
+      section { padding: 48px 20px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <header aria-label="Cabeçalho do site">
+    <nav class="nav">
+      <a class="brand" href="#topo" aria-label="Agente Leal, início"><span class="mark">AL</span><span>Agente Leal</span></a>
+      <div class="links" aria-label="Navegação principal">
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#privacidade">Privacidade</a>
+        <a class="button" href="mailto:contato@agenteleal.com.br">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <div class="hero" id="topo">
+      <div>
+        <span class="eyebrow">Serviços digitais e automação</span>
+        <h1>Atendimento digital com processos mais claros e menos trabalho manual.</h1>
+        <p class="lead">O Agente Leal apoia prestadores, pequenos negócios e projetos digitais com automação, integração de sistemas, páginas simples, atendimento via WhatsApp e organização de fluxos operacionais.</p>
+        <div class="actions">
+          <a class="button" href="mailto:contato@agenteleal.com.br">Falar por e-mail</a>
+          <a class="button secondary" href="#servicos">Ver serviços</a>
+        </div>
+        <div class="proof" aria-label="Informações principais">
+          <div><strong>Responsável</strong><span>Isaac Leal</span></div>
+          <div><strong>Atuação</strong><span>Fortaleza/CE e remoto</span></div>
+          <div><strong>Site oficial</strong><span>agenteleal.com.br</span></div>
+        </div>
+      </div>
+      <aside class="panel" aria-label="Resumo de entregas">
+        <h2>Como posso ajudar</h2>
+        <div class="task"><span class="check">✓</span><div><strong>Automação de atendimento</strong><span>Fluxos de WhatsApp, triagem, respostas e integrações.</span></div></div>
+        <div class="task"><span class="check">✓</span><div><strong>Integração de ferramentas</strong><span>Conexões entre sistemas, formulários, APIs e rotinas internas.</span></div></div>
+        <div class="task"><span class="check">✓</span><div><strong>Presença digital enxuta</strong><span>Landing pages, domínios, e-mails e configurações técnicas essenciais.</span></div></div>
+        <div class="task"><span class="check">✓</span><div><strong>Consultoria técnica</strong><span>Organização de processos digitais com foco prático e seguro.</span></div></div>
+      </aside>
+    </div>
+
+    <section id="servicos">
+      <div class="section-title">
+        <h2>Serviços objetivos para operação digital.</h2>
+        <p>Projetos pequenos, bem definidos e úteis: menos complexidade, mais funcionamento real.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><h3>Atendimento e WhatsApp</h3><p>Configuração de presença, fluxos de contato, mensagens, integrações e apoio operacional para canais digitais.</p></article>
+        <article class="card"><h3>Automação sob medida</h3><p>Rotinas para reduzir tarefas repetitivas, conectar dados e criar processos mais auditáveis.</p></article>
+        <article class="card"><h3>Web e domínio</h3><p>Páginas institucionais simples, DNS, e-mail profissional, formulários e publicação estática.</p></article>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="about">
+        <article class="card">
+          <h2>Sobre o Agente Leal</h2>
+          <p>Agente Leal é a presença digital de Isaac Leal para prestação de serviços de tecnologia, automação e atendimento digital. O trabalho é voltado a soluções práticas para negócios, prestadores e iniciativas locais.</p>
+        </article>
+        <article class="card">
+          <h2>Informações comerciais</h2>
+          <ul class="list">
+            <li>Responsável: Isaac Leal</li>
+            <li>Empresa registrada no Brasil sob CNPJ</li>
+            <li>Base de atendimento: Fortaleza, Ceará</li>
+            <li>Contato oficial: contato@agenteleal.com.br</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="privacidade">
+      <div class="section-title">
+        <h2>Política de privacidade</h2>
+        <p>Tratamento simples e responsável de dados recebidos por formulário, e-mail, WhatsApp ou outros canais de atendimento.</p>
+      </div>
+      <div class="card privacy">
+        <p><strong>Dados coletados:</strong> nome, contato, mensagem enviada e informações necessárias para responder solicitações ou prestar serviços.</p>
+        <p><strong>Finalidade:</strong> atendimento, orçamento, execução de serviços contratados, suporte e comunicação operacional.</p>
+        <p><strong>Compartilhamento:</strong> dados não são vendidos. Podem ser processados em ferramentas técnicas necessárias para e-mail, hospedagem, automação e atendimento.</p>
+        <p><strong>Direitos do titular:</strong> solicitações de acesso, correção ou remoção podem ser enviadas para <a href="mailto:contato@agenteleal.com.br">contato@agenteleal.com.br</a>.</p>
+        <p><strong>Atualização:</strong> 05/06/2026.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="contact">
+        <div>
+          <h2>Vamos organizar seu atendimento digital?</h2>
+          <p>Envie uma mensagem com o contexto do projeto, canal desejado e objetivo principal. A resposta será direcionada para uma solução simples e executável.</p>
+        </div>
+        <div class="contact-box">
+          <span>Contato oficial</span>
+          <a href="mailto:contato@agenteleal.com.br">contato@agenteleal.com.br</a>
+          <a href="https://agenteleal.com.br">https://agenteleal.com.br</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="inner">
+      <span>© 2026 Agente Leal. Todos os direitos reservados.</span>
+      <span>Responsável: Isaac Leal · Fortaleza/CE</span>
+    </div>
+  </footer>
+</body>
+</html>
